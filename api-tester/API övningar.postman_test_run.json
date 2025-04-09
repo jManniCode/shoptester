@@ -1,0 +1,947 @@
+{
+	"id": "39285fdc-6ec4-4ca4-b1b4-f1e63297436e",
+	"name": "API övningar",
+	"timestamp": "2025-04-09T11:38:01.676Z",
+	"collection_id": "43554531-97e168b6-7d55-4929-9f0b-17e15c1ecf3e",
+	"folder_id": 0,
+	"environment_id": "43554531-a846af16-87ed-4048-a8e4-9c7a57ceaf91",
+	"totalPass": 62,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-04-09T11:37:59.583Z",
+	"totalFail": 1,
+	"results": [
+		{
+			"id": "1079c16e-4210-4e49-913a-581f921f218a",
+			"name": "GetAllProducts",
+			"url": "http://localhost:5000/api/products",
+			"time": 2,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status should be 200": true,
+				"Body should be an array": true
+			},
+			"testPassFailCounts": {
+				"Response status should be 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body should be an array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"Response status should be 200": true,
+					"Body should be an array": true
+				}
+			]
+		},
+		{
+			"id": "0bd6644f-a04e-4035-98a5-e78d18c59dad",
+			"name": "GetProduct",
+			"url": "http://localhost:5000/api/products/1",
+			"time": 2,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status should be 200": true,
+				"Body should be an object": true
+			},
+			"testPassFailCounts": {
+				"Response status should be 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body should be an object": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"Response status should be 200": true,
+					"Body should be an object": true
+				}
+			]
+		},
+		{
+			"id": "a64acef9-eabb-4ecf-b433-a6e2762fea87",
+			"name": "GetAllCategories",
+			"url": "http://localhost:5000/api/categories",
+			"time": 2,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status should be 200": true,
+				"Body should be an array": true
+			},
+			"testPassFailCounts": {
+				"Response status should be 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body should be an array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"Response status should be 200": true,
+					"Body should be an array": true
+				}
+			]
+		},
+		{
+			"id": "11ed1c8e-616e-462f-8c10-9404ca2c6e76",
+			"name": "LoginAdmin",
+			"url": "http://localhost:5000/api/login",
+			"time": 2,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Should return status 200 on login": true
+			},
+			"testPassFailCounts": {
+				"Should return status 200 on login": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"Should return status 200 on login": true
+				}
+			]
+		},
+		{
+			"id": "889d6f4b-be57-4b3a-81e3-eb5a473ea6b5",
+			"name": "VerifyLoginAdmin",
+			"url": "http://localhost:5000/api/login",
+			"time": 1,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status should be 200": true,
+				"Check admin role": true
+			},
+			"testPassFailCounts": {
+				"Response status should be 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check admin role": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1
+			],
+			"allTests": [
+				{
+					"Response status should be 200": true,
+					"Check admin role": true
+				}
+			]
+		},
+		{
+			"id": "1b5a6734-6257-4050-a246-3d44e15b8d16",
+			"name": "CreateNewproduct",
+			"url": "http://localhost:5000/api/products",
+			"time": 15,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response status should be 201": true,
+				"Body should be an object": true
+			},
+			"testPassFailCounts": {
+				"Response status should be 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body should be an object": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				15
+			],
+			"allTests": [
+				{
+					"Response status should be 201": true,
+					"Body should be an object": true
+				}
+			]
+		},
+		{
+			"id": "b70e85d0-2b21-4e8d-bc91-dc7b18de8098",
+			"name": "CreateSameProduct",
+			"url": "http://localhost:5000/api/products",
+			"time": 4,
+			"responseCode": {
+				"code": 409,
+				"name": "Conflict"
+			},
+			"tests": {
+				"Response status should be 409": true
+			},
+			"testPassFailCounts": {
+				"Response status should be 409": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Response status should be 409": true
+				}
+			]
+		},
+		{
+			"id": "a2798385-1792-468d-9530-b462c3ed12f0",
+			"name": "UpdateProduct",
+			"url": "http://localhost:5000/api/products/80",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Should return 200 on update": true
+			},
+			"testPassFailCounts": {
+				"Should return 200 on update": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Should return 200 on update": true
+				}
+			]
+		},
+		{
+			"id": "a26eff2d-1398-4940-b5a5-eb504f564780",
+			"name": "DeleteProduct",
+			"url": "http://localhost:5000/api/products/80",
+			"time": 11,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status should be 200": true
+			},
+			"testPassFailCounts": {
+				"Response status should be 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Response status should be 200": true
+				}
+			]
+		},
+		{
+			"id": "36dd8fe7-6caf-423a-9daa-f882ff5a991f",
+			"name": "LogoutAdmin",
+			"url": "http://localhost:5000/api/login",
+			"time": 1,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Content-Type header is application/json": true,
+				"Message field is present in the response": true,
+				"Message field is a non-empty string": true,
+				"Validate that the HTTP method is DELETE": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message field is present in the response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message field is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate that the HTTP method is DELETE": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Content-Type header is application/json": true,
+					"Message field is present in the response": true,
+					"Message field is a non-empty string": true,
+					"Validate that the HTTP method is DELETE": true
+				}
+			]
+		},
+		{
+			"id": "b6c6fdf7-0090-44c0-9fa6-3eb8535af197",
+			"name": "CreateUser",
+			"url": "http://localhost:5000/api/users",
+			"time": 11,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response content type is application/json": true,
+				"Response object should contain username, email, password, role, and insertId properties": true,
+				"Email is in a valid format": true,
+				"Password should not be empty": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response content type is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response object should contain username, email, password, role, and insertId properties": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Email is in a valid format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Password should not be empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response content type is application/json": true,
+					"Response object should contain username, email, password, role, and insertId properties": true,
+					"Email is in a valid format": true,
+					"Password should not be empty": true
+				}
+			]
+		},
+		{
+			"id": "91fd90f7-1078-44bc-9e0f-d3ba1a65b469",
+			"name": "LoginUser",
+			"url": "http://localhost:5000/api/login",
+			"time": 2,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Content-Type header is application/json": true,
+				"Id, username, email, and role fields should exist": true,
+				"Email is in a valid format": true,
+				"Role is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id, username, email, and role fields should exist": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Email is in a valid format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Role is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Content-Type header is application/json": true,
+					"Id, username, email, and role fields should exist": true,
+					"Email is in a valid format": true,
+					"Role is a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "4b1f490f-94ca-4144-92f6-6ba2bbb78e58",
+			"name": "VerifyUserLogin",
+			"url": "http://localhost:5000/api/login",
+			"time": 1,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Content-Type header is set to application/json": true,
+				"Response has the required fields - id, username, email, and role": true,
+				"Email is in a valid format": true,
+				"Role is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is set to application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields - id, username, email, and role": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Email is in a valid format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Role is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Content-Type header is set to application/json": true,
+					"Response has the required fields - id, username, email, and role": true,
+					"Email is in a valid format": true,
+					"Role is a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "1471725f-1bc8-49cb-be80-f27d40c864d0",
+			"name": "GetAllProducts Copy",
+			"url": "http://localhost:5000/api/products",
+			"time": 2,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status should be 200": true,
+				"Body should be an array": true
+			},
+			"testPassFailCounts": {
+				"Response status should be 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body should be an array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"Response status should be 200": true,
+					"Body should be an array": true
+				}
+			]
+		},
+		{
+			"id": "616754ce-d3ea-457b-be99-33480291c39b",
+			"name": "CreateOrder",
+			"url": "http://localhost:5000/api/orders",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response has the required fields": true,
+				"Customer_id and product_id are non-negative integers": true,
+				"Price and total should be non-negative numbers": true,
+				"Response Content-Type is application/json": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Customer_id and product_id are non-negative integers": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Price and total should be non-negative numbers": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response Content-Type is application/json": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response has the required fields": true,
+					"Customer_id and product_id are non-negative integers": true,
+					"Price and total should be non-negative numbers": true,
+					"Response Content-Type is application/json": true
+				}
+			]
+		},
+		{
+			"id": "373b471c-fd7b-482c-b3b5-15c6f548bf73",
+			"name": "GetOrderByUser",
+			"url": "http://localhost:5000/api/user/45/orders",
+			"time": 2,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response has the required fields": true,
+				"Id is a non-negative integer": true,
+				"Quantity and price should be non-negative numbers": true,
+				"CreatedAt is a valid date": false
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id is a non-negative integer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Quantity and price should be non-negative numbers": {
+					"pass": 1,
+					"fail": 0
+				},
+				"CreatedAt is a valid date": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response has the required fields": true,
+					"Id is a non-negative integer": true,
+					"Quantity and price should be non-negative numbers": true,
+					"CreatedAt is a valid date": false
+				}
+			]
+		},
+		{
+			"id": "a7a8d26d-062d-438f-9bab-9f39b1b91429",
+			"name": "LogoutUser",
+			"url": "http://localhost:5000/api/login",
+			"time": 2,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Content type is application/json": true,
+				"Message field is present in the response": true,
+				"Message field is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content type is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message field is present in the response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message field is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Content type is application/json": true,
+					"Message field is present in the response": true,
+					"Message field is a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "7216d827-47a0-43dc-8d02-6ba1eadedff4",
+			"name": "LoginAdmin Copy",
+			"url": "http://localhost:5000/api/login",
+			"time": 2,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Should return status 200 on login": true
+			},
+			"testPassFailCounts": {
+				"Should return status 200 on login": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"Should return status 200 on login": true
+				}
+			]
+		},
+		{
+			"id": "59680f53-b787-4a70-ba66-861c7538f410",
+			"name": "VerifyLoginAdmin Copy",
+			"url": "http://localhost:5000/api/login",
+			"time": 2,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status should be 200": true,
+				"Check admin role": true
+			},
+			"testPassFailCounts": {
+				"Response status should be 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check admin role": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"Response status should be 200": true,
+					"Check admin role": true
+				}
+			]
+		},
+		{
+			"id": "3be2cd12-057f-417a-ba2d-e11c53eada95",
+			"name": "FindAllUsers",
+			"url": "http://localhost:5000/api/users",
+			"time": 2,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response has the required fields - id, username, email, and role": true,
+				"Email is in a valid format": true,
+				"Verify that the response is an array with at least one element": true,
+				"Content-Type header is application/json": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields - id, username, email, and role": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Email is in a valid format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that the response is an array with at least one element": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response has the required fields - id, username, email, and role": true,
+					"Email is in a valid format": true,
+					"Verify that the response is an array with at least one element": true,
+					"Content-Type header is application/json": true
+				}
+			]
+		},
+		{
+			"id": "0847bd2b-510a-488b-b068-d292c4c746e4",
+			"name": "DeleteUser",
+			"url": "http://localhost:5000/api/users/45",
+			"time": 16,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				16
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "52541442-b080-44fb-91c4-0e5cdb9e858d",
+			"name": "LogoutAdmin Copy",
+			"url": "http://localhost:5000/api/login",
+			"time": 1,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Content-Type is application/json": true,
+				"Message field is present in the response": true,
+				"Message is a non-empty string": true,
+				"Validate that the HTTP method is DELETE": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message field is present in the response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate that the HTTP method is DELETE": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Content-Type is application/json": true,
+					"Message field is present in the response": true,
+					"Message is a non-empty string": true,
+					"Validate that the HTTP method is DELETE": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 103,
+	"collection": {
+		"requests": [
+			{
+				"id": "1079c16e-4210-4e49-913a-581f921f218a",
+				"method": "GET"
+			},
+			{
+				"id": "0bd6644f-a04e-4035-98a5-e78d18c59dad",
+				"method": "GET"
+			},
+			{
+				"id": "a64acef9-eabb-4ecf-b433-a6e2762fea87",
+				"method": "GET"
+			},
+			{
+				"id": "11ed1c8e-616e-462f-8c10-9404ca2c6e76",
+				"method": "POST"
+			},
+			{
+				"id": "889d6f4b-be57-4b3a-81e3-eb5a473ea6b5",
+				"method": "GET"
+			},
+			{
+				"id": "1b5a6734-6257-4050-a246-3d44e15b8d16",
+				"method": "POST"
+			},
+			{
+				"id": "b70e85d0-2b21-4e8d-bc91-dc7b18de8098",
+				"method": "POST"
+			},
+			{
+				"id": "a2798385-1792-468d-9530-b462c3ed12f0",
+				"method": "PATCH"
+			},
+			{
+				"id": "a26eff2d-1398-4940-b5a5-eb504f564780",
+				"method": "DELETE"
+			},
+			{
+				"id": "36dd8fe7-6caf-423a-9daa-f882ff5a991f",
+				"method": "DELETE"
+			},
+			{
+				"id": "b6c6fdf7-0090-44c0-9fa6-3eb8535af197",
+				"method": "POST"
+			},
+			{
+				"id": "91fd90f7-1078-44bc-9e0f-d3ba1a65b469",
+				"method": "POST"
+			},
+			{
+				"id": "4b1f490f-94ca-4144-92f6-6ba2bbb78e58",
+				"method": "GET"
+			},
+			{
+				"id": "1471725f-1bc8-49cb-be80-f27d40c864d0",
+				"method": "GET"
+			},
+			{
+				"id": "616754ce-d3ea-457b-be99-33480291c39b",
+				"method": "POST"
+			},
+			{
+				"id": "373b471c-fd7b-482c-b3b5-15c6f548bf73",
+				"method": "GET"
+			},
+			{
+				"id": "a7a8d26d-062d-438f-9bab-9f39b1b91429",
+				"method": "DELETE"
+			},
+			{
+				"id": "7216d827-47a0-43dc-8d02-6ba1eadedff4",
+				"method": "POST"
+			},
+			{
+				"id": "59680f53-b787-4a70-ba66-861c7538f410",
+				"method": "GET"
+			},
+			{
+				"id": "3be2cd12-057f-417a-ba2d-e11c53eada95",
+				"method": "GET"
+			},
+			{
+				"id": "0847bd2b-510a-488b-b068-d292c4c746e4",
+				"method": "DELETE"
+			},
+			{
+				"id": "52541442-b080-44fb-91c4-0e5cdb9e858d",
+				"method": "DELETE"
+			}
+		]
+	}
+}
