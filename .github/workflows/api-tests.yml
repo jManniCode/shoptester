@@ -30,7 +30,7 @@ jobs:
       - name: Start Server
         run: cd server && nohup dotnet run &
       - name: Run API-Tests
-        run: newman run ./api-test/Test.postman_collection.json
+        run: newman run ""./api-tester/API övningar.postman_collection.json" -e "api-tester/Api övningar.postman_environment.json"
 
   gui_tests:
     runs-on: ubuntu-latest
